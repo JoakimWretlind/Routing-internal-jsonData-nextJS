@@ -1,6 +1,6 @@
 ## About
 
-Dynamic routing between a list and details from a json-file stored inside the project.
+Dynamic routing, with static generation, between a list and details of people from a json-file stored inside the project.
 Some animations to sparkle it up a bit.
 
 ## Tech Used
@@ -11,7 +11,7 @@ Some animations to sparkle it up a bit.
 </br>
 
 ## Live Verion
- will come
+https://routing-internal-json.vercel.app/
 
 ## Getting Started
 
