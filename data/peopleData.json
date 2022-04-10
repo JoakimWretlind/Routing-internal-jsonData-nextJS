@@ -1,0 +1,34 @@
+{
+    "peoples": [
+        {
+            "id": "Jean_Reno",
+            "name": "Jean Reno",
+            "cover": "/images/sean.jpg",
+            "country": "Marocko"
+        },
+        {
+            "id": "Steve_McQueen",
+            "name": "Steve McQueen",
+            "cover": "/images/steve.jpg",
+            "country": "USA"
+        },
+        {
+            "id": "Uma_Thurman",
+            "name": "Uma Thurman",
+            "cover": "/images/uma.jpg",
+            "country": "USA"
+        },
+        {
+            "id": "Jimi_Hendrix",
+            "name": "Jimi Hendrix",
+            "cover": "/images/jimi.jpg",
+            "country": "USA"
+        },
+        {
+            "id": "Natalie_Portman",
+            "name": "Natalie Portman",
+            "cover": "/images/natalie.jpg",
+            "country": "Israel"
+        }
+    ]
+}
