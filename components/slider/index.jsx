@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import { Container, Slider, SliderItem, Img, Button, H3, Overlay } from "./style";
 import { ToModelsTransition } from "../animations/toDetailsTransition";
 
-
-
 export const Section = ({ slides }) => {
     const [isDetails, setIsDetails] = useState(false)
     const [constraint, setConstraint] = useState(0);
@@ -39,7 +37,7 @@ export const Section = ({ slides }) => {
             y: 0,
             opacity: 1,
             transition: {
-                duration: 2,
+                duration: 1.3,
                 ease: 'easeOut'
             }
         }

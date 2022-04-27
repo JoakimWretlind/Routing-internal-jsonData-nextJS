@@ -21,11 +21,15 @@ export const InnerWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;    
-    border: .2rem solid red;
 `;
 
-export const Img = styled.img`
-    height: 100%;
+export const ImageWrapper = styled.div`    
+    width: 50vh;
+    border: .2rem solid yellow;
+`;
+
+export const Img = styled.img`      
+    height: 50vh;
     object-fit: cover;
 `;
 
@@ -65,7 +69,7 @@ export const A = styled.a`
     font-weight: 200;
     font-size: clamp(2rem, 2vw, 3rem);
     letter-spacing: clamp(.1rem, 2vw, .3rem);
-    transition: .25s ease-out;
+   
     color: #333;
     &:hover{
         cursor: pointer; 

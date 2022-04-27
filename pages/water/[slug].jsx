@@ -1,21 +1,24 @@
 import { useRef, useEffect } from 'react'
 import path from 'path'
 import fs from 'fs/promises'
-import { gsap } from 'gsap'
-import { motion } from 'framer-motion'
 import { Wrapper, InnerWrapper, Img, } from '../../styles/slug.style'
 import { BackBtn } from '../../components/ui/backBtn'
+import { gsap } from "gsap";
+import { CustomEase } from "gsap/dist/CustomEase";
 
-const PersonDetailPage = (props) => {
+gsap.registerPlugin(CustomEase);
+
+const PersonDetailPage = (props, { isDetails }) => {
     const { loadedWater } = props
     const imgRef = useRef(null)
 
     useEffect(() => {
         const tl = gsap.timeline()
-        tl.from(imgRef.current, { height: "20vh", duration: 1 }, "0.3")
-        tl.to(imgRef.current, { height: "90vh", duration: .5 }, "<0.5")
-        tl.to(imgRef.current, { width: "90vw", duration: 1 }, "<1.5")
 
+        // tl.to(imgRef.current, { duration: 1, ease: CustomEase.create("custom", "M0,0 C0.012,0.522 0.394,0.446 0.578,0.562 0.798,0.7 0.984,0.772 1,1 "), y: 0, height: "100vh" })
+        tl.from(imgRef.current, { autoAlpha: 0 })
+        tl.to(imgRef.current, { duration: 1, ease: "sine.inOut", y: 0, autoAlpha: 1, height: "100vh" }, "0")
+        tl.to(imgRef.current, { duration: 1, ease: "sine.inOut", y: 0, width: "100vw" }, "<1.3")
     }, [])
 
     // fallback state for fallback: true
@@ -23,38 +26,15 @@ const PersonDetailPage = (props) => {
         return <p>Loading...</p>
     }
 
-    // const container = {
-    //     hidden: { opacity: 0 },
-    //     show: {
-    //         opacity: 1,
-    //         transition: {
-    //             delayChildren: 0.5,
-    //             staggerDirection: -1
-    //         }
-    //     }
-    // }
-
-    // const item = {
-    //     hidden: { opacity: 0 },
-    //     show: { opacity: 1 }
-    // }
-
     return (
         <Wrapper className="details">
-            <InnerWrapper
-            // as={motion.div}
-            // variants={container}
-            // initial="hidden"
-            // animate="show"
-            >
+            <InnerWrapper>
                 <BackBtn />
                 <Img
                     src={loadedWater.cover}
                     alt={loadedWater.name}
                     ref={imgRef}
-                // as={motion.img}
-                // variants={item}
-                />
+                    isDetails={isDetails} />
                 <BackBtn />
             </InnerWrapper>
         </Wrapper>
