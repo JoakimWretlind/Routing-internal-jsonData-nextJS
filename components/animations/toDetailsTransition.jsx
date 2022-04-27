@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { MotionOverlay, Panel } from '../../styles/common.style';
+import { MotionOverlay, Panel } from '../../styles/slug.style';
 
 // How many panels we want
 const articles = [

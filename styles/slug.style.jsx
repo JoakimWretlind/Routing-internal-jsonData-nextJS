@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+    overflow:hidden;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -20,15 +21,12 @@ export const InnerWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;    
-`;
-
-export const ImageWrapper = styled.div`    
-    width: 50vh;
+    border: .2rem solid red;
 `;
 
 export const Img = styled.img`
-    height: 50vh;
-    margin: 2rem 0;
+    height: 100%;
+    object-fit: cover;
 `;
 
 export const H2 = styled.h2`

@@ -1,11 +1,8 @@
 import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
 import { motion } from 'framer-motion';
-import { Wrapper, InnerWrapper, H2, A, LI } from "../../styles/common.style";
 import { Container, Slider, SliderItem, Img, Button, H3, Overlay } from "./style";
-import { BoxUL } from "../animations/boxUl";
 import { ToModelsTransition } from "../animations/toDetailsTransition";
-import styled from 'styled-components';
 
 
 
@@ -42,7 +39,7 @@ export const Section = ({ slides }) => {
             y: 0,
             opacity: 1,
             transition: {
-                duration: .3,
+                duration: 2,
                 ease: 'easeOut'
             }
         }
@@ -63,7 +60,7 @@ export const Section = ({ slides }) => {
                             variants={listVariant}>
                             <Img src={water.cover} alt={water.name} />
                             <Link href={`/water/${water.id}`} passHref>
-                                <Button>watch</Button>
+                                <Button onClick={() => setIsDetails(!isDetails)}>watch</Button>
                             </Link>
                         </SliderItem>
                     ))}

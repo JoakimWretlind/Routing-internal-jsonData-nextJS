@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Wrapper, ImageWrapper } from "../styles/common.style"
+import { Wrapper, ImageWrapper } from "../styles/slug.style"
 import { BackBtn } from "../components/ui/backBtn"
 import Lionel from '../public/images/lionel.jpg'
 
