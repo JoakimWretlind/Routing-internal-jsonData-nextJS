@@ -28,6 +28,7 @@ export const Section = ({ slides }) => {
             )
         }
     }
+
     const listVariant = {
         hidden: {
             y: -20,
@@ -45,10 +46,10 @@ export const Section = ({ slides }) => {
     }
     return (
         <>
-
-            <H3>water</H3>
             <Container>
+                {/* fading transition */}
                 <HomeTransition >
+                    <H3>water</H3>
                     <Slider
                         as={motion.ul}
                         ref={ref}
@@ -66,16 +67,13 @@ export const Section = ({ slides }) => {
                             </SliderItem>
                         ))}
 
-
                     </Slider>
                 </HomeTransition>
             </Container>
-
+            {/* stagger transition */}
             <Overlay isDetails={isDetails}>
                 {handleActive()}
             </Overlay>
-
-
         </>
     )
 }

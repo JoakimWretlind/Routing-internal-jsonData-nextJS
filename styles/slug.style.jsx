@@ -1,15 +1,13 @@
 import styled, { keyframes } from 'styled-components';
 
 export const Wrapper = styled.div`
-    overflow:hidden;
+    overflow: hidden;
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    &.details{
-        background-color: #000;
-    }
+    background-color: #02050E;
 `;
 
 export const InnerWrapper = styled.div`
@@ -25,29 +23,34 @@ export const InnerWrapper = styled.div`
 
 export const ImageWrapper = styled.div`    
     width: 50vh;
-    border: .2rem solid yellow;
 `;
 
 // Use keyframes here becaus that's the most effective way
 const fadeIn = keyframes`
   0% {
-    opacity: 0;
-    height: 50vh;
-    width: 20%;
-    animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
-  }
-  20%{
+        opacity: 0;
+        height: 50vh;
+        width: 20%;
+        animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+    }
+    10% {
+        opacity: 0;
+        height: 50vh;
+        width: 20%;
+        animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+    }
+    20%{
       opacity: 1;
-  }
+    }
     50%{    
-    width: 100vw;    
+        width: 100vw;    
     }
     60%{
-    height: 50vh;
+        height: 50vh;
     }
-  100% {
-    height: 100vh;
-    animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+    100% {
+        height: 100vh;
+        animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
   }
 `
 
@@ -102,7 +105,8 @@ export const A = styled.a`
 `;
 
 // Set the drif-template-columns to repeat the same amount of panels in 
-// '/components/animations/toDetailsTransition', 1fr will make them even
+// '/components/animations/toDetailsTransition', 1fr will make them evenly
+// wide
 export const MotionOverlay = styled.div`
     position: fixed;
     top: 0;
@@ -114,5 +118,5 @@ export const MotionOverlay = styled.div`
 
 export const Panel = styled.div`
     height: 100vh;
-    background-color: #000;
+    background-color: #02050E;
 `;

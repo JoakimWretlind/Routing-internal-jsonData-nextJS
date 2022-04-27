@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import path from 'path'
 import fs from 'fs/promises';
-import { HomeTransition } from '../components/animations/homeTransition'
 import { Section } from '../components/slider';
 
 export default function Home({ slides }) {
@@ -13,12 +12,12 @@ export default function Home({ slides }) {
         <link rel="icon" href="/logo.png" />
       </Head>
 
-
       <Section slides={slides} />
     </>
   )
 }
 
+/** Get the data */
 export async function getStaticProps() {
   const filePath = path.join(process.cwd(), 'data', 'waterData.json')
   const jsonData = await fs.readFile(filePath)
