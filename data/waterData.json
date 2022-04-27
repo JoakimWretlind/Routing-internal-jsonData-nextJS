@@ -1,0 +1,59 @@
+{
+    "slides": [
+        {
+            "id": "1",
+            "name": "water 1",
+            "cover": "/images/water/pic1.jpg"
+        },
+        {
+            "id": "2",
+            "name": "water 2",
+            "cover": "/images/water/pic2.jpg"
+        },
+        {
+            "id": "3",
+            "name": "water 3",
+            "cover": "/images/water/pic3.jpg"
+        },
+        {
+            "id": "4",
+            "name": "water 4",
+            "cover": "/images/water/pic4.jpg"
+        },
+        {
+            "id": "5",
+            "name": "water 5",
+            "cover": "/images/water/pic5.jpg"
+        },
+        {
+            "id": "6",
+            "name": "water 6",
+            "cover": "/images/water/pic6.jpg"
+        },
+        {
+            "id": "7",
+            "name": "water 7",
+            "cover": "/images/water/pic7.jpg"
+        },
+        {
+            "id": "8",
+            "name": "water 8",
+            "cover": "/images/water/pic8.jpg"
+        },
+        {
+            "id": "9",
+            "name": "water 9",
+            "cover": "/images/water/pic9.jpg"
+        },
+        {
+            "id": "10",
+            "name": "water 10",
+            "cover": "/images/water/pic10.jpg"
+        },
+        {
+            "id": "11",
+            "name": "water 11",
+            "cover": "/images/water/pic11.jpg"
+        }
+    ]
+}
