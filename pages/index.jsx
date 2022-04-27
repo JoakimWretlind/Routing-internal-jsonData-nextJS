@@ -13,7 +13,7 @@ export default function Home({ slides }) {
         <link rel="icon" href="/logo.png" />
       </Head>
 
-      <HomeTransition />
+
       <Section slides={slides} />
     </>
   )

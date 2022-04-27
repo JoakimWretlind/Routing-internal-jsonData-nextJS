@@ -7,9 +7,9 @@ export const HomeTransition = ({ children }) => {
             animate={{ opacity: 1, }}
             exit={{
                 opacity: 0,
-                transition: { delay: .3 }
+                transition: { delay: .0 }
             }}
-            transition={{ duration: .5 }}
+            transition={{ duration: .7 }}
         >
             {children}
         </motion.div>

@@ -12,14 +12,14 @@ const PersonDetailPage = (props, { isDetails }) => {
     const { loadedWater } = props
     const imgRef = useRef(null)
 
-    useEffect(() => {
-        const tl = gsap.timeline()
+    // useEffect(() => {
+    //     const tl = gsap.timeline()
 
-        // tl.to(imgRef.current, { duration: 1, ease: CustomEase.create("custom", "M0,0 C0.012,0.522 0.394,0.446 0.578,0.562 0.798,0.7 0.984,0.772 1,1 "), y: 0, height: "100vh" })
-        tl.from(imgRef.current, { autoAlpha: 0 }, "0.3")
-        tl.to(imgRef.current, { duration: 0.75, ease: "sine.inOut", y: 0, autoAlpha: 1, height: "100vh" }, "<0.2")
-        tl.to(imgRef.current, { duration: 1, ease: "sine.inOut", y: 0, width: "100vw" }, "<1.3")
-    }, [])
+    //     // tl.to(imgRef.current, { duration: 1, ease: CustomEase.create("custom", "M0,0 C0.012,0.522 0.394,0.446 0.578,0.562 0.798,0.7 0.984,0.772 1,1 "), y: 0, height: "100vh" })
+    //     tl.from(imgRef.current, { autoAlpha: 0 }, "0.3")
+    //     tl.to(imgRef.current, { duration: 0.75, ease: "sine.inOut", y: 0, autoAlpha: 1, height: "100vh" }, "<0.2")
+    //     tl.to(imgRef.current, { duration: 1, ease: "sine.inOut", y: 0, width: "100vw" }, "<1.3")
+    // }, [])
 
     // fallback state for fallback: true
     if (!loadedWater) {

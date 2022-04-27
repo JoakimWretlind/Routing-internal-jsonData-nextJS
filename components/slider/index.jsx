@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
 import { motion } from 'framer-motion';
 import { Container, Slider, SliderItem, Img, Button, H3, Overlay } from "./style";
+import { HomeTransition } from "../animations/homeTransition";
 import { ToModelsTransition } from "../animations/toDetailsTransition";
 
 export const Section = ({ slides }) => {
@@ -44,30 +45,37 @@ export const Section = ({ slides }) => {
     }
     return (
         <>
+
             <H3>water</H3>
             <Container>
-                <Slider
-                    as={motion.ul}
-                    ref={ref}
-                    drag="x"
-                    dragConstraints={{ right: 0, left: -constraint }}
-                    key={constraint}
-                >
-                    {slides.map(water => (
-                        <SliderItem key={water.id} as={motion.li}
-                            variants={listVariant}>
-                            <Img src={water.cover} alt={water.name} />
-                            <Link href={`/water/${water.id}`} passHref>
-                                <Button onClick={() => setIsDetails(!isDetails)}>watch</Button>
-                            </Link>
-                        </SliderItem>
-                    ))}
+                <HomeTransition >
+                    <Slider
+                        as={motion.ul}
+                        ref={ref}
+                        drag="x"
+                        dragConstraints={{ right: 0, left: -constraint }}
+                        key={constraint}
+                    >
+                        {slides.map(water => (
+                            <SliderItem key={water.id} as={motion.li}
+                                variants={listVariant}>
+                                <Img src={water.cover} alt={water.name} isDetails={isDetails} />
+                                <Link href={`/water/${water.id}`} passHref>
+                                    <Button onClick={() => setIsDetails(!isDetails)}>watch</Button>
+                                </Link>
+                            </SliderItem>
+                        ))}
 
-                    <Overlay isDetails={isDetails}>
-                        {handleActive()}
-                    </Overlay>
-                </Slider>
+
+                    </Slider>
+                </HomeTransition>
             </Container>
+
+            <Overlay isDetails={isDetails}>
+                {handleActive()}
+            </Overlay>
+
+
         </>
     )
 }
