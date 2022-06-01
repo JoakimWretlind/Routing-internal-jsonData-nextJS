@@ -7,7 +7,7 @@ export const HomeTransition = ({ children }) => {
             animate={{ opacity: 1, }}
             exit={{
                 opacity: 0,
-                transition: { delay: .0 }
+                transition: { delay: .5 } // important so that the image doesn't come in too soon
             }}
             transition={{ duration: .7 }}
         >

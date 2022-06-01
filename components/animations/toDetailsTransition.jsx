@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 import { MotionOverlay, Panel } from '../../styles/slug.style';
 
 // How many panels we want
@@ -12,20 +13,24 @@ const articles = [
 
 export const ToDetailsTransition = () => {
     return (
+
         <MotionOverlay>
-            {articles.map((article, i) => (
-                <Panel
-                    as={motion.li}
-                    key={article.id}
-                    initial={{ translateY: i % 2 === 0 ? "-100vh" : "100vh" }}
-                    animate={{ translateY: 0 }}
-                    transition={{
-                        duration: .5,
-                        delay: i * 0.1,
-                        ease: [0.5, .11, 0.45, 0.15]
-                    }}
-                />
-            ))}
+            <AnimatePresence exitBeforeEnter>
+                {articles.map((article, i) => (
+                    <Panel
+                        as={motion.li}
+                        key={article.id}
+                        initial={{ translateY: i % 2 === 0 ? "-100vh" : "100vh" }}
+                        animate={{ translateY: 0 }}
+                        transition={{
+                            duration: .5,
+                            delay: i * 0.1,
+                            ease: [0.5, .11, 0.45, 0.15]
+                        }}
+                    />
+                ))}
+            </AnimatePresence>
         </MotionOverlay>
+
     )
 }

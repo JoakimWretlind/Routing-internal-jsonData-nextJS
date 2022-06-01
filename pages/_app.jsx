@@ -3,6 +3,9 @@ import { GlobalStyle } from '../styles/globalStyle'
 /** AnimatePresence has to be used here (and not in Layout).
  * router might be a bit redundant in this case.
  */
+/**
+ * homeTransition is important to hold back the image from the stagger
+ */
 
 function MyApp({ Component, pageProps, router }) {
   return (

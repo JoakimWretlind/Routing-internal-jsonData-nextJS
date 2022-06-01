@@ -33,29 +33,24 @@ const fadeIn = keyframes`
         width: 20%;
         animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
     }
-    30% {
+    10% {
         opacity: 0;
         height: 50vh;
         width: 20%;
         animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
     }
-    40% {
-        opacity: 0;
-        height: 50vh;
-        width: 20%;
-        animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
-    }
-    60%{
+    20%{
       opacity: 1;
     }
-    70%{    
+    50%{    
         width: 100vw;    
     }
-    83%{
+    60%{
         height: 50vh;
     }
     100% {
         height: 100vh;
+        animation-delay: 2s;
         animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
   }
 `
@@ -64,7 +59,7 @@ export const Img = styled.img`
     height: 100vh;
     width: 100vw;
     object-fit: cover;
-    animation: 2.7s ${fadeIn};
+    animation: 1.9s ${fadeIn};
 `;
 
 export const H2 = styled.h2`
