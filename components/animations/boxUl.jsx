@@ -10,7 +10,6 @@ export const BoxUL = (props) => {
         visible: {
             x: 0,
             transition: {
-                delay: .25,
                 when: "beforeChildren",
                 staggerChildren: .15
             }
