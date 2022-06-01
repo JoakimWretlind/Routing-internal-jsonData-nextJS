@@ -39,7 +39,7 @@ const fadeIn = keyframes`
         width: 20%;
         animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
     }
-    45% {
+    40% {
         opacity: 0;
         height: 50vh;
         width: 20%;
