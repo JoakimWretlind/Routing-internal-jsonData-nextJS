@@ -21,7 +21,6 @@ const PersonDetailPage = (props, { isDetails }) => {
                     alt={loadedWater.name}
                     ref={imgRef}
                     isDetails={isDetails} />
-                <BackBtn />
             </InnerWrapper>
         </Wrapper>
     )

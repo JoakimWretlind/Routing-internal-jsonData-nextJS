@@ -3,7 +3,7 @@ import Link from "next/link"
 import { motion } from 'framer-motion';
 import { Container, Slider, SliderItem, Img, Button, H3, Overlay } from "./style";
 import { HomeTransition } from "../animations/homeTransition";
-import { ToModelsTransition } from "../animations/toDetailsTransition";
+import { ToDetailsTransition } from "../animations/toDetailsTransition";
 
 export const Section = ({ slides }) => {
     const [isDetails, setIsDetails] = useState(false)
@@ -24,7 +24,7 @@ export const Section = ({ slides }) => {
     const handleActive = () => {
         if (isDetails == true) {
             return (
-                <ToModelsTransition />
+                <ToDetailsTransition />
             )
         }
     }

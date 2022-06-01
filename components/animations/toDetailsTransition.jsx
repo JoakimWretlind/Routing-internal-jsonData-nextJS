@@ -10,7 +10,7 @@ const articles = [
     { id: 5 }
 ]
 
-export const ToModelsTransition = () => {
+export const ToDetailsTransition = () => {
     return (
         <MotionOverlay>
             {articles.map((article, i) => (
